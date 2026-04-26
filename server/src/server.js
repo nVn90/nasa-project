@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 8000;
 
 const server = http.createServer(app);
 
+// Starting the server
 async function startServer() {
   await mongoConnect();
   await loadPlanetsData();
