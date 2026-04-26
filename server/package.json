@@ -4,9 +4,11 @@
   "description": "NASA Mission Controller",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test-watch": "jest --watch",
     "start": "node src/server.js",
-    "watch": "nodemon src/server.js"
+    "watch": "nodemon src/server.js",
+    "cluster": "pm2 start src/server.js -i max"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +24,8 @@
     "pm2": "^6.0.14"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "jest": "^30.3.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^7.2.2"
   }
 }

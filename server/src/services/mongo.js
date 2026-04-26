@@ -14,7 +14,9 @@ mongoose.connection.on('error', (err) => {
 });
 
 async function mongoConnect() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(MONGO_URL, {
+    serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of default 30s
+  });
 }
 
 async function mongoDisconnect() {
