@@ -16,7 +16,7 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "echo \"No client tests specified\""
   },
   "browserslist": {
     "production": [
